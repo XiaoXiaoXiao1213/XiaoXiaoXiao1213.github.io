@@ -286,6 +286,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaoxiaoxiao">
+      <meta itemprop="description" content="肖小小的博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="肖小小">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/24/vim/" itemprop="url">
+                  vim
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-24 22:31:33 / Modified: 23:17:02" itemprop="dateCreated datePublished" datetime="2018-07-24T22:31:33+08:00">2018-07-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><small>在终端输入vimtutor有学习教程</small></p>
+<p>###基本操作<br>|vim filename| 创建/进入文件|<br>| k j h l|分别表示上、下、左、右移动|<br>| Esc    |退出某个模式|</p>
+<p>###光标移动<br>|e       |光标跳转至一个单词的末尾|<br>|w   |光标跳转至下一个单词开头|<br>|$   |光标跳转至行末|<br>|i   |进入插入模式，在光标位置前插入|<br>|I|在光标所在行行首插入|<br>|a|进入插入模式，在光标位置后插入|<br>|A|在一行后的末尾插入|<br>|o|在光标的下一行插入|<br>|O|在光标的上一行插入|<br>|x|删除光标所在位置|<br>|0|移动光标到首行|<br>|：n|到第n行|<br>|nG|到第n行|<br>|gg|到第一行|<br>|G|到最后一行|</p>
+<p>###保存退出<br>|：wq|保存并退出|<br>|q! Enter |丢弃修改并退出vim|</p>
+<p>###查找指令<br>|/ 搜索内容|搜索内容，n表示往下继续查找，N表示往上查找，反向查找用?代替 /|<br>|输入：set ic|忽略大小写|<br>|输入：set noic|区分大小写|<br>|输入：set (no)hl|是否设置搜索内容高亮|<br>|输入：set (no)is|设置查找短语时显示部分匹配|<br>|%|查找与光标所在位置相匹配的左、右大括号、中括号、小括号|<br>|v|进入可视模式，移动光标会选中内容，可对选中内容进行各种操作|<br>|：!+命令|执行外部文件或命令|<br>|:set nu|设置行号|<br>|：set nonu|取消行号|</p>
+<p>###复制粘贴<br>|y|复制|<br>|yy|复制当前行|<br>|nyy|复制当前行以下n行|<br>|dd|剪切当前行|<br>|ndd|剪切当前行以下n行|<br>|p，P|粘贴在当前光标所在行下或行上|<br>|p|将最后一次删除的内容置入光标所在位置|</p>
+<p>###删除操作<br>|x|删除光标所在位置|<br>|nx|删除光标所在处的n个字符|<br>|dd|删除光标所在行|<br>|ndd|删除n行|<br>|dG|删除光标所在行到文件末尾内容|<br>|D|删除光标所在处到行尾内容|<br>|：n1,n2d|删除指定范围的行|<br>|dw|从当前光标当前位置直到下一个单词起始处，不包括它的第一个字符。|<br>|de|从当前光标当前位置直到单词末尾，包括最后一个字符。|<br>|d$|从当前光标当前位置直到当前行末。|</p>
+<p>###撤销<br>|u|撤销以前的操作|<br>|U| 撤销一行中的所有改动|<br>|Ctrl R：撤销撤销命令|</p>
+<p>###更改操作<br>|r+字母|将光标所在位置替换成指定字母|<br>|ce|要改变文本直到一个单词的末尾，会同时进入插入模式|<br>|R|可以连续更改内容|</p>
+<p>###文件定位及操作</p>
+<p>|Ctrl+G|显示当前编辑文件中当前光标所在行位置以及文件状态信息|<br>|:w 文件名|新建一个文件夹保存当前文件|<br>|:r 文件名|在光标位置置入指定内容|<br>|：r ！命令|导入命令执行结果| </p>
+<p>###替换命令<br>|:s/原内容/替换的内容|该命令只改变光标所在行的第一个匹配项|<br>|:s/原内容/替换的内容/g|改变全行的匹配项|<br>|:#,#s/old/new/g|其中 #,# 代表的是替换操作的若干行中首尾两行的行号。|<br>|:%s/old/new/g|则是替换整个文件中的每个匹配串。|<br>|:%s/old/new/gc|会找到整个文件中的每个匹配串，并且对每个匹配串提示是否进行替换。(y表示是，n表示不，q表示退出，l表示离开)|<br>|:n1,n2s/old/new/g|在一定范围内替换指定字符串|</p>
+<p>###定义快捷键<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map 快捷键 触发指令</span><br><span class="line">map ^P I#&lt;ESC&gt;</span><br><span class="line">map ^b 0x</span><br></pre></td></tr></table></figure></p>
+<p>###连续行注释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:n1,n2s/^/#/g  在行首加入#</span><br><span class="line">:n1,n2s/^#//g 行首的#变为空</span><br><span class="line">:n1,n2s/^/\/\//g 行首的\\变为空</span><br></pre></td></tr></table></figure></p>
+<p>###替换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab mgmail samlee@....   \\a变为b</span><br></pre></td></tr></table></figure></p>
+<p>在配置文件写才对所有文件永久有效<br>用户– /home/username/.vimrc<br>root  – /root/.vimrc</p>
+<p><em>命令时，按 CTRL-D 可以查看可能的补全结果。按<tab>可以使用一个补全。</tab></em></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/Linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -536,7 +692,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
