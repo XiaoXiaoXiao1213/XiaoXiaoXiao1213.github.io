@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>肖小小</title>
   
-  
+  <subtitle>用努力换天赋</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-23T08:44:39.235Z</updated>
+  <updated>2018-07-24T00:38:32.716Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2018/07/24/test/"/>
+    <id>http://yoursite.com/2018/07/24/test/</id>
+    <published>2018-07-24T00:38:32.000Z</published>
+    <updated>2018-07-24T00:38:32.716Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
